@@ -1,0 +1,36 @@
+﻿@page
+@namespace Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI.Demo.Pages
+
+
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+
+    var color_data = new List<SelectListItem>()
+    {
+        new SelectListItem() {
+            Text = "Black",
+            Value = "1"
+        },
+        new SelectListItem() {
+            Text = "Orange",
+            Value = "2"
+        },
+        new SelectListItem() {
+            Text = "Grey",
+            Value = "3"
+        }
+    };
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<kendo-dropdownlist name="color" style="width: 100%"
+                    datatextfield="Text"
+                    datavaluefield="Value"
+                    value="1"
+                    bind-to="color_data">
+</kendo-dropdownlist>
+@(Html.Kendo().DropDownList().Name("color2").BindTo(color_data))

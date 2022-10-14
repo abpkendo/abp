@@ -9,11 +9,13 @@ using Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI.Toolbars;
 using Volo.Abp.Modularity;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.AspNetCore.Mvc.UI.KendoUI;
 
 namespace Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI;
 [DependsOn(
     typeof(AbpAspNetCoreMvcUiThemeSharedModule),
     typeof(AbpAspNetCoreMvcUiMultiTenancyModule)
+    //typeof(AbpAspNetCoreMvcUiKendoUIModule)
     )]
 public class AbpAspNetCoreMvcUIKendoUIThemeModule:AbpModule
 {
@@ -46,27 +48,5 @@ public class AbpAspNetCoreMvcUIKendoUIThemeModule:AbpModule
         {
             options.Contributors.Add(new KendoUIThemeMainTopToolbarContributor());
         });
-
-        Configure<AbpBundlingOptions>(options =>
-        {
-            options
-                .StyleBundles
-                .Add(KendoUIThemeBundles.Styles.Global, bundle =>
-                {
-                    bundle
-                        .AddBaseBundles(StandardBundles.Styles.Global)
-                        .AddContributors(typeof(KendoUIThemeGlobalStyleContributor));
-                });
-
-            options
-                .ScriptBundles
-                .Add(KendoUIThemeBundles.Scripts.Global, bundle =>
-                {
-                    bundle
-                        .AddBaseBundles(StandardBundles.Scripts.Global)
-                        .AddContributors(typeof(KendoUIThemeGlobalScriptContributor));
-                });
-        });
-        context.Services.AddKendo();
     }
 }

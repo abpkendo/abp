@@ -5,6 +5,6 @@ public class KendoUIStylesBundleContributor : BundleContributor
 {
     public override void ConfigureBundle(BundleConfigurationContext context)
     {
-        context.Files.Add("/themes/kendoui/kendo.bootstrap-main.min.css");
+        context.Files.Add("/libs/kendoui/kendo.bootstrap-main.min.css");
     }
 }

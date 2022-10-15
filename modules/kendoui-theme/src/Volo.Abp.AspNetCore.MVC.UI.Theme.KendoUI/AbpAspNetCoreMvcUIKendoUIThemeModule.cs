@@ -1,23 +1,20 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
+using Volo.Abp.AspNetCore.Mvc.UI.KendoUI;
 using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI.Toolbars;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Toolbars;
 using Volo.Abp.AspNetCore.Mvc.UI.Theming;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI.Bundling;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI.Toolbars;
 using Volo.Abp.Modularity;
 using Volo.Abp.VirtualFileSystem;
-using Volo.Abp.AspNetCore.Mvc.UI.KendoUI;
 
 namespace Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI;
 [DependsOn(
     typeof(AbpAspNetCoreMvcUiThemeSharedModule),
-    typeof(AbpAspNetCoreMvcUiMultiTenancyModule)
-    //typeof(AbpAspNetCoreMvcUiKendoUIModule)
+    typeof(AbpAspNetCoreMvcUiMultiTenancyModule),
+    typeof(AbpAspNetCoreMvcUiKendoUIModule)
     )]
-public class AbpAspNetCoreMvcUIKendoUIThemeModule:AbpModule
+public class AbpAspNetCoreMvcUIKendoUIThemeModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

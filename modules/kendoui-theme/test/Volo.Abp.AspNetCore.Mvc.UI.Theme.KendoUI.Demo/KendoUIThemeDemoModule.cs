@@ -10,11 +10,11 @@ using Volo.Abp.VirtualFileSystem;
 
 namespace Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI.Demo;
 
-//[DependsOn(
-//    typeof(AbpAspNetCoreMvcUIKendoUIThemeModule),
-//    typeof(AbpAspNetCoreMvcUiThemeSharedDemoModule),
-//    typeof(AbpAutofacModule)
-//    )]
+[DependsOn(
+    typeof(AbpAspNetCoreMvcUIKendoUIThemeModule),
+    typeof(AbpAspNetCoreMvcUiThemeSharedDemoModule),
+    typeof(AbpAutofacModule)
+    )]
 public class KendoUIThemeDemoModule:AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

@@ -1,11 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 using Volo.Abp.Modularity;
 using Volo.Abp.VirtualFileSystem;
 
 namespace Volo.Abp.AspNetCore.Mvc.UI.KendoUI;
 
 [DependsOn(
-    typeof(AbpVirtualFileSystemModule)
+    typeof(AbpVirtualFileSystemModule),
+    typeof(AbpAspNetCoreMvcUiBundlingAbstractionsModule)
     )]
 public class AbpAspNetCoreMvcUiKendoUIModule : AbpModule
 {

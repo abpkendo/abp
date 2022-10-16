@@ -33,6 +33,13 @@
 
   <ItemGroup>
     <Content Remove="Themes\**\*.*" />
-  </ItemGroup> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Themes\KendoUI\Components\Brand\MainNavbarBrandViewComponent.cs" />
+    <EmbeddedResource Remove="Themes\KendoUI\Components\MainNavbar\MainNavbarViewComponent.cs" />
+    <EmbeddedResource Remove="Themes\KendoUI\Components\Menu\MainNavbarMenuViewComponent.cs" />
+    <EmbeddedResource Remove="Themes\KendoUI\Components\Toolbar\MainNavbarToolbarViewComponent.cs" />
+  </ItemGroup>
 
 </Project>

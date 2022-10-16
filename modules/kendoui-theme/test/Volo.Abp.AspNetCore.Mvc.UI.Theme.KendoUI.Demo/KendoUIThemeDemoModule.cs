@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
+using Volo.Abp.AspNetCore.Mvc.UI.Theme.KendoUI.Demo.Menus;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Demo;
 using Volo.Abp.AspNetCore.Mvc.UI.Theming;
@@ -36,10 +37,10 @@ public class KendoUIThemeDemoModule:AbpModule
                 .AddFiles("/demo/styles/main.css");
         });
 
-        //Configure<AbpNavigationOptions>(options =>
-        //{
-        //    options.MenuContributors.Add(new KendoUIThemeDemoMenuContributor());
-        //});
+        Configure<AbpNavigationOptions>(options =>
+        {
+            options.MenuContributors.Add(new KendoUIThemeDemoMenuContributor());
+        });
     }
 
     public override void OnApplicationInitialization(ApplicationInitializationContext context)

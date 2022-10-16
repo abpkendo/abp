@@ -1,0 +1,20 @@
+/*layout*/
+main.k-layout-main-container{
+    display:flex;
+}
+aside.k-layout-main-menu {
+    width: 290px;
+    height: 100%;
+    border-right: 1px solid #DEDEDE;
+    background: #ffffff;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+div.k-layout-main-content {
+    width: 100%;
+    flex: 1 0 0;
+    -ms-flex: 1;
+    margin-left: 290px;
+    overflow: hidden;
+}

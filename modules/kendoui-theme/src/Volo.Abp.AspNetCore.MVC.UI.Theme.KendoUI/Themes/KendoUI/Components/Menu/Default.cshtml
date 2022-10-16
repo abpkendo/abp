@@ -1,0 +1,7 @@
+﻿@using Volo.Abp.UI.Navigation
+@using Kendo.Mvc.UI
+@model List<PanelBarItemModel>
+
+@(Html.Kendo().PanelBar()
+.Name("mainNavMenu")
+.BindTo(Model))
